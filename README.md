@@ -1,0 +1,2 @@
+# ApiGameJS
+Api pokemon + Juego 
