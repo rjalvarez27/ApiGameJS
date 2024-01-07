@@ -13,15 +13,17 @@ document.addEventListener("DOMContentLoaded", () => {
 //funcion Local storage
 
 function agregar(id) {
-    console.log(id)
-    favoritos =[... new Set(JSON.parse(localStorage.getItem("pokemon")))] || []
-    favoritos.push(id)
-    if (favoritos.length > 5) {
-        favoritos.shift()
+    favoritos = [... new Set(JSON.parse(localStorage.getItem("pokemon")))] || []
+    let value = favoritos.includes(id)
+    if (!value) {
+     favoritos.push(id)
+        if (favoritos.length > 5) {
+            favoritos.shift()
+        };
+        localStorage.setItem("pokemon", JSON.stringify(favoritos));
+        traerFavoritos(id)
     };
-    localStorage.setItem("pokemon", JSON.stringify(favoritos));
-    traerFavoritos(id)
-}
+};
 
 //cargar favoritos 
 
@@ -64,16 +66,16 @@ function mostrarFavoritos(data) {
     name.classList.add("name_fav");
     div.appendChild(name);
     div.appendChild(img);
-    
+
 }
 
 
 // borrar Favoritos
 
-function borrar(){
-   favoritos = [];
-   localStorage.clear();
-   favoritosV.innerHTML=`<img src="/Api/Img/favoritos.png " alt="favoritos" class="fav">`
+function borrar() {
+    favoritos = [];
+    localStorage.clear();
+    favoritosV.innerHTML = `<img src="/Api/Img/favoritos.png " alt="favoritos" class="fav">`
 }
 
 // traer la primera url Api
