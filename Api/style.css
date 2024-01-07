@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: bisque;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+header img {
+    width: 250px;
+    margin: 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+#favoritosV {
+    display: flex;
+    position: relative;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#favoritosV .fav {
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+}
+
+#favoritosV .card_fav {
+    width: 70px;
+}
+
+#favoritosV .card_fav img {
+    width: 60px;
+}
+
+#favoritosV .card_fav p {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.button-24 {
+    background: #FF4742;
+    border: 1px solid #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #FF4742;
+}
+
+.button-24:active {
+    opacity: .5;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 20px;
+}
+
+.flip-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 160px;
+    height: 220px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 2rem;
+    margin: 5px;
+}
+
+.flip-card:hover .card-container {
+    transform: rotateY(180deg);
+}
+
+.img {
+    width: 120px;
+}
+
+.card-container {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    text-transform: uppercase;
+}
+
+.pokemon-block,
+.pokemon-block-back {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: whitesmoke;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+}
+
+.pokemon-block,
+.pokemon-block-back {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+
+.pokemon-block-back {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0%;
+    gap: 10px;
+}
+
+.pokemon-block-back .div_back p {
+    margin-top: 10px;
+}
+
+.flip-card button {
+    width: 80px;
+    background-image: linear-gradient(#ead40d, #eab70d);
+    border: 0;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: Montserrat, sans-serif;
+    font-size: .9em;
+    margin: 5px;
+    padding: 10px 15px;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-left: 40px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.btn button {
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #000;
+    color: #000;
+    cursor: pointer;
+    fill: #000;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    height: 40px;
+    justify-content: center;
+    letter-spacing: -.8px;
+    outline: 0;
+    padding: 0 17px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.btn button:focus {
+    color: #171e29;
+}
+
+.btn button:hover {
+    border-color: rgb(228, 216, 53);
+    color: rgb(255, 239, 18);
+    fill: rgb(241, 245, 34);
+}
+
+.btn button:active {
+    border-color: rgb(228, 216, 53);
+    color: rgb(255, 239, 18);
+    fill: rgb(241, 245, 34);
+}
+
+@media (min-width: 768px) {
+    .btn button {
+        min-width: 170px;
+    }
+}

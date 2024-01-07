@@ -1,0 +1,15 @@
+1) Realizar una página que consuma una API, la página debe mostrar información general de los personajes. Esta página deberá tener lo siguiente:
+  a) Botones de Paginación y mostrar un máximo de 12 elementos por página.
+  b) Cada personaje debe ser capaz de mostrarte información sobre un único elemento/personaje una vez que hagas clic en el.
+  c) Cada personaje debe tener un botón/icono para añadir a "favoritos".
+  d) La información debe persistir aunque cierres el navegador (Usar localstorage y consumo de API a través de Fetch) 
+
+   Puedes usar la Api de Rick and Morty (https://rickandmortyapi.com/api/character) o puedes usar la Api de Pokemon (https://pokeapi.co/).
+
+2) Hacer el juego de piedra papel o tijera, el cual indique cual es el ganador que jugo cada uno. Debes poder jugarlo contra la computadora, además debe tener un historial de las ultimas 5 partidas..
+
+(OPCIONAL por si eres TryHard) Realizar el juego 3 en raya (la vieja).
+
+--Nota--: Cada uno de estos proyectos debe ser visualmente atractivo y responsive.
+
+FECHA DE ENTREGA: Domingo 10/12/2023

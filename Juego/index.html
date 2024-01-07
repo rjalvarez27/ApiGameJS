@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Piedra, papel o Tijera</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Juego Piedra|Papel|Tijera</h1>
+        <div class="result" id="result">
+            <img src="/Juego/Img/tijera.PNG" alt="Usuario" id="userImg" />
+            <p class="text" id="text">Pulsa la opcion para empezar</p>
+            <img src="/Juego/Img/piedra.PNG" alt="Computadora" id="machineImg" />
+        </div>
+        <div id="btns">
+            <button id="piedra" type="button">
+                <img src="/Juego/Img/piedra.PNG" alt="piedra" class="btn_b" />
+            </button>
+            <button id="papel" type="button">
+                <img src="/Juego/Img/papel.PNG" alt="papel" class="btn_b" />
+            </button>
+            <button id="tijera" type="button">
+                <img src="/Juego/Img/tijera.PNG" alt="tijera" class="btn_b" />
+            </button>
+        </div>
+        <h3>Historial de Partidas</h3>
+        <h2 id="puntaje"></h2>
+        <div>
+            <ul id="historial"></ul>
+            <button class="borrarHistorial" onclick="borrarHistorial()">
+                Borrar Historial
+            </button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
